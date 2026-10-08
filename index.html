@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Yvon Meistermann | Engineering Portfolio</title>
+
+    <meta name="description"
+          content="Yvon Meistermann - ENSEEIHT FISA 3EA Engineering Portfolio">
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f9;
+            color: #17203a;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            height: 76px;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #e7e7eb;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #c52c72;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: 0.25s;
+        }
+
+        .menu a:hover {
+            color: #c52c72;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 150px 6% 90px;
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: #c52c72;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+
+            font-size: clamp(65px, 9vw, 115px);
+
+            line-height: 0.88;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 35px;
+        }
+
+        .hero h1 span {
+            color: #c52c72;
+        }
+
+        .hero-description {
+            max-width: 620px;
+
+            font-size: 20px;
+
+            color: #60697d;
+
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            border-radius: 4px;
+
+            background: #17203a;
+
+            color: white;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            transition: 0.25s;
+        }
+
+        .button:hover {
+            background: #c52c72;
+
+            transform: translateY(-2px);
+        }
+
+        .button.secondary {
+            background: transparent;
+
+            color: #17203a;
+
+            border: 1px solid #17203a;
+        }
+
+        .button.secondary:hover {
+            color: white;
+
+            border-color: #c52c72;
+
+            background: #c52c72;
+        }
+
+
+        /* =====================================================
+           PHOTO
+        ===================================================== */
+
+        .photo-container {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .photo-placeholder {
+            width: 360px;
+
+            height: 460px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #17203a,
+                    #2a3455
+                );
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: white;
+
+            border-radius: 6px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .photo-placeholder::before {
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+
+            height: 300px;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            border-radius: 50%;
+        }
+
+        .photo-placeholder strong {
+            position: relative;
+
+            font-size: 55px;
+
+            letter-spacing: 3px;
+
+            color: #c52c72;
+        }
+
+        .photo-placeholder small {
+            position: relative;
+
+            margin-top: 10px;
+
+            letter-spacing: 3px;
+
+            color: #d8dbe4;
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
+
+        .section {
+            padding: 120px 6%;
+
+            max-width: 1250px;
+
+            margin: auto;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: Georgia, serif;
+
+            font-size: clamp(40px, 5vw, 65px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            max-width: 700px;
+
+            color: #687084;
+
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 38px;
+
+            min-height: 300px;
+
+            border-radius: 6px;
+
+            border: 1px solid #e9e9ed;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 40px rgba(20, 30, 60, 0.08);
+        }
+
+        .card-number {
+            color: #c52c72;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 45px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+
+            margin-bottom: 18px;
+        }
+
+        .card p {
+            color: #687084;
+        }
+
+
+        /* =====================================================
+           DARK SECTIONS
+        ===================================================== */
+
+        .dark {
+            max-width: none;
+
+            background: #17203a;
+
+            color: white;
+
+            padding-left: max(6%, calc((100% - 1130px) / 2));
+
+            padding-right: max(6%, calc((100% - 1130px) / 2));
+        }
+
+        .dark .section-header p {
+            color: #bfc5d3;
+        }
+
+
+        /* =====================================================
+           CAREER
+        ===================================================== */
+
+        .timeline {
+            border-left: 2px solid #c52c72;
+
+            padding-left: 35px;
+
+            max-width: 850px;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            margin-bottom: 45px;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            width: 12px;
+
+            height: 12px;
+
+            background: #c52c72;
+
+            border-radius: 50%;
+
+            left: -42px;
+
+            top: 6px;
+        }
+
+        .timeline-date {
+            color: #c52c72;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .timeline-item h3 {
+            font-size: 24px;
+
+            margin: 7px 0;
+        }
+
+        .timeline-item p {
+            color: #bfc5d3;
+        }
+
+        .company {
+            margin-top: 70px;
+
+            padding: 35px;
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            border-radius: 6px;
+
+            max-width: 850px;
+        }
+
+        .company h3 {
+            font-size: 28px;
+
+            margin-bottom: 8px;
+        }
+
+        .company .role {
+            color: #c52c72;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .company ul {
+            padding-left: 20px;
+
+            color: #c3c8d5;
+        }
+
+        .company li {
+            margin-bottom: 7px;
+        }
+
+
+        /* =====================================================
+           DOCUMENTS
+        ===================================================== */
+
+        .documents {
+            margin-top: 50px;
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .document-button {
+            display: inline-block;
+
+            padding: 13px 20px;
+
+            border: 1px solid rgba(255,255,255,0.3);
+
+            border-radius: 4px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.25s;
+        }
+
+        .document-button:hover {
+            background: #c52c72;
+
+            border-color: #c52c72;
+        }
+
+
+        /* =====================================================
+           MOBILITY
+        ===================================================== */
+
+        .mobility-intro {
+            max-width: 800px;
+
+            font-size: 20px;
+
+            color: #60697d;
+
+            margin-bottom: 50px;
+        }
+
+        .mobility-card {
+            min-height: 280px;
+        }
+
+        .mobility-card .number {
+            font-size: 13px;
+
+            color: #c52c72;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           PASSIONS
+        ===================================================== */
+
+        .light {
+            background: #f0f1f4;
+
+            max-width: none;
+
+            padding-left: max(6%, calc((100% - 1130px) / 2));
+
+            padding-right: max(6%, calc((100% - 1130px) / 2));
+        }
+
+        .passion-card {
+            min-height: 280px;
+        }
+
+
+        /* =====================================================
+           CIVIC ENGAGEMENT
+        ===================================================== */
+
+        .civic-content {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: start;
+        }
+
+        .civic-big {
+            font-family: Georgia, serif;
+
+            font-size: 38px;
+
+            line-height: 1.3;
+        }
+
+        .civic-content h3 {
+            font-size: 27px;
+
+            margin-bottom: 20px;
+        }
+
+        .civic-content p,
+        .civic-content li {
+            color: #bfc5d3;
+        }
+
+        .civic-content ul {
+            margin-top: 25px;
+
+            padding-left: 20px;
+        }
+
+        .civic-content li {
+            margin-bottom: 10px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #0e1427;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 60px 30px;
+        }
+
+        footer h3 {
+            color: #c52c72;
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #858da1;
+
+            font-size: 14px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            nav {
+                height: auto;
+
+                min-height: 70px;
+
+                flex-direction: column;
+
+                padding: 18px 20px;
+
+                gap: 12px;
+            }
+
+            .menu {
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .menu a {
+                font-size: 11px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding-top: 180px;
+
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .civic-content {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-container {
+                order: -1;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+                font-size: 65px;
+
+                letter-spacing: -3px;
+            }
+
+            .photo-placeholder {
+                width: 280px;
+
+                height: 360px;
+            }
+
+            .section {
+                padding-top: 90px;
+
+                padding-bottom: 90px;
+            }
+
+            .section-header h2 {
+                font-size: 42px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <div class="logo">
+        YVON <span>MEISTERMANN</span>
+    </div>
+
+    <div class="menu">
+
+        <a href="#welcome">
+            Welcome
+        </a>
+
+        <a href="#projects">
+            Projects
+        </a>
+
+        <a href="#career">
+            Career
+        </a>
+
+        <a href="#mobility">
+            Mobility
+        </a>
+
+        <a href="#passions">
+            Passions
+        </a>
+
+        <a href="#civic">
+            Civic Engagement
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     WELCOME
+===================================================== -->
+
+<section id="welcome"
+         class="hero">
+
+    <div>
+
+        <p class="eyebrow">
+            ENSEEIHT · FISA 3EA
+        </p>
+
+        <h1>
+            Yvon<br>
+            <span>Meistermann</span>
+        </h1>
+
+        <p class="hero-description">
+
+            Engineering student at ENSEEIHT and
+            apprentice at Actemium Toulouse Energies,
+            developing my skills in electrical engineering,
+            energy and automation.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a href="#career"
+               class="button">
+
+                Discover my career
+
+            </a>
+
+            <a href="#projects"
+               class="button secondary">
+
+                My projects
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="photo-container">
+
+        <!--
+            WE WILL REPLACE THIS WITH YOUR PHOTO
+            LATER.
+        -->
+
+        <div class="photo-placeholder">
+
+            <strong>YM</strong>
+
+            <small>
+                ENGINEERING PORTFOLIO
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects"
+         class="section">
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            01 — PROJECTS
+        </p>
+
+        <h2>
+            Engineering Projects
+        </h2>
+
+        <p>
+
+            A selection of my academic and professional
+            projects in electrical engineering, energy
+            and automation.
+
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <article class="card">
+
+            <div class="card-number">
+                PROJECT 01
+            </div>
+
+            <h3>
+                Electrical Engineering
+            </h3>
+
+            <p>
+
+                Academic projects developed during my
+                engineering studies, focusing on electrical
+                systems, modelling and technical problem
+                solving.
+
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                PROJECT 02
+            </div>
+
+            <h3>
+                Energy Systems
+            </h3>
+
+            <p>
+
+                Work related to electrical energy systems,
+                installation studies and energy optimisation.
+
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                PROJECT 03
+            </div>
+
+            <h3>
+                Automation & Control
+            </h3>
+
+            <p>
+
+                Development of skills in automation,
+                control-command and industrial systems.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAREER
+===================================================== -->
+
+<section id="career"
+         class="section dark">
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            02 — CAREER
+        </p>
+
+        <h2>
+            My Professional Journey
+        </h2>
+
+        <p>
+
+            From electrical engineering studies to
+            engineering school and apprenticeship.
+
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2026 — 2029
+            </div>
+
+            <h3>
+                Actemium Toulouse Energies
+            </h3>
+
+            <p>
+                Engineering apprentice.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2026 — PRESENT
+            </div>
+
+            <h3>
+                ENSEEIHT — FISA 3EA
+            </h3>
+
+            <p>
+
+                Engineering studies in Electronics,
+                Electrical Energy and Automation.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2025 — 2026
+            </div>
+
+            <h3>
+                CPGE ATS — Génie Industriel
+            </h3>
+
+            <p>
+
+                Preparation for engineering school.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2023 — 2025
+            </div>
+
+            <h3>
+                BTS Électrotechnique
+            </h3>
+
+            <p>
+
+                Electrical engineering and industrial
+                systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                BEFORE 2023
+            </div>
+
+            <h3>
+                Bac Pro MELEC
+            </h3>
+
+            <p>
+
+                Electrical and connected environments.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="company">
+
+        <h3>
+            Actemium Toulouse Energies
+        </h3>
+
+        <div class="role">
+            Engineering Apprentice
+        </div>
+
+        <p>
+
+            My apprenticeship allows me to connect
+            engineering theory with real industrial
+            applications.
+
+        </p>
+
+        <ul>
+
+            <li>
+                Electrical studies
+            </li>
+
+            <li>
+                Dimensioning of electrical installations
+            </li>
+
+            <li>
+                Control-command systems
+            </li>
+
+            <li>
+                Energy optimisation
+            </li>
+
+            <li>
+                Hydroelectric installations
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="documents">
+
+        <!--
+            THESE LINKS WILL BE ACTIVATED
+            WHEN WE ADD YOUR DOCUMENTS.
+        -->
+
+        <a href="#"
+           class="document-button">
+
+            My CV
+
+        </a>
+
+        <a href="#"
+           class="document-button">
+
+            Cover Letter
+
+        </a>
+
+        <a href="#"
+           class="document-button">
+
+            LinkedIn
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MOBILITY
+===================================================== -->
+
+<section id="mobility"
+         class="section">
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            03 — MOBILITY
+        </p>
+
+        <h2>
+            International Mobility
+        </h2>
+
+        <p>
+
+            International mobility will be an important
+            part of my engineering journey. I want to
+            develop my technical skills while discovering
+            new professional and cultural environments.
+
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <article class="card mobility-card">
+
+            <div class="number">
+                MOBILITY 01
+            </div>
+
+            <h3>
+                European Engineering
+            </h3>
+
+            <p>
+
+                A first international project focused on
+                discovering another European engineering
+                environment.
+
+            </p>
+
+        </article>
+
+
+        <article class="card mobility-card">
+
+            <div class="number">
+                MOBILITY 02
+            </div>
+
+            <h3>
+                Energy & Industry
+            </h3>
+
+            <p>
+
+                A professional mobility project connected
+                to energy and industrial engineering.
+
+            </p>
+
+        </article>
+
+
+        <article class="card mobility-card">
+
+            <div class="number">
+                MOBILITY 03
+            </div>
+
+            <h3>
+                International Experience
+            </h3>
+
+            <p>
+
+                A third project aimed at developing my
+                professional English and my ability to
+                work in an international environment.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PASSIONS
+===================================================== -->
+
+<section id="passions"
+         class="section light">
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            04 — PASSIONS
+        </p>
+
+        <h2>
+            Beyond Engineering
+        </h2>
+
+        <p>
+
+            My personal interests are also an important
+            part of who I am and the skills I bring to
+            professional environments.
+
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <article class="card passion-card">
+
+            <div class="card-number">
+                01
+            </div>
+
+            <h3>
+                Volunteer Firefighter
+            </h3>
+
+            <p>
+
+                Volunteer firefighter since 2019.
+                This experience has developed my teamwork,
+                responsibility, discipline and ability to
+                remain calm in demanding situations.
+
+            </p>
+
+        </article>
+
+
+        <article class="card passion-card">
+
+            <div class="card-number">
+                02
+            </div>
+
+            <h3>
+                Cycling & Mountain Biking
+            </h3>
+
+            <p>
+
+                I enjoy cycling and mountain biking,
+                particularly for the physical challenge
+                and the opportunity to explore new places.
+
+            </p>
+
+        </article>
+
+
+        <article class="card passion-card">
+
+            <div class="card-number">
+                03
+            </div>
+
+            <h3>
+                Hiking & Sport
+            </h3>
+
+            <p>
+
+                Outdoor activities and physical challenges
+                are an important part of my personal balance.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CIVIC ENGAGEMENT
+===================================================== -->
+
+<section id="civic"
+         class="section dark">
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            05 — CIVIC ENGAGEMENT
+        </p>
+
+        <h2>
+            My Commitment
+        </h2>
+
+    </div>
+
+
+    <div class="civic-content">
+
+
+        <div>
+
+            <p class="civic-big">
+
+                Commitment and teamwork are values
+                that I develop through my volunteer
+                activities.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Volunteer Firefighter
+            </h3>
+
+            <p>
+
+                Since 2019, I have been involved as a
+                volunteer firefighter. This commitment
+                allows me to contribute to the community
+                while developing strong interpersonal
+                and professional skills.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Emergency response
+                </li>
+
+                <li>
+                    Person rescue
+                </li>
+
+                <li>
+                    Road accident response
+                </li>
+
+                <li>
+                    Firefighting
+                </li>
+
+                <li>
+                    Association activities
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <h3>
+        Yvon Meistermann
+    </h3>
+
+    <p>
+        ENSEEIHT · FISA 3EA · Toulouse
+    </p>
+
+    <p>
+        Engineering Portfolio · 2026
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
