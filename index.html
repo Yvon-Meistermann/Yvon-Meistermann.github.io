@@ -16,15 +16,28 @@ main{overflow:hidden}.section{width:min(100% - 48px,var(--max));margin:auto;padd
 @media(max-width:900px){.nav-wrap{align-items:flex-start;flex-direction:column;gap:10px}.nav-links{justify-content:flex-start}.nav-links a{padding:7px 9px;font-size:.82rem}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-panel{grid-template-columns:1fr}}
 @media(max-width:620px){.hero{min-height:auto}.hero-inner{width:min(100% - 34px,var(--max));padding:68px 0}.section,.section-alt .section{width:min(100% - 34px,var(--max));padding:62px 0}.grid-2,.grid-3{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:6px;padding-bottom:25px}.timeline-item:not(:last-child):before{left:5px;top:24px}.timeline-date{padding-left:23px}.timeline-date:after{left:0;right:auto;top:7px}.timeline-content{padding-left:23px}.band,.contact-panel{padding:24px}.hero-fact{min-width:calc(50% - 8px)}.card-image{height:185px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+
+/* Independent portfolio tabs: only the selected section is displayed. */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.hero.tab-content.active { display: grid; }
+.nav-links a.active { color: white; background: #2868ad; }
+.nav-links a { cursor: pointer; }
+
 </style>
 </head>
 <body id="top">
 <header><div class="nav-wrap">
 <a class="brand" href="#top">ENGINEERING PORTFOLIO<small>ENSEEIHT · FISA 3EA</small></a>
-<nav class="nav-links" aria-label="Main navigation">
-<a href="#welcome">Welcome</a><a href="#projects">Projects</a><a href="#career">Career</a><a href="#mobility">Mobility</a><a href="#passions">Passions</a><a href="#civic">Civic Engagement</a><a href="#contact">Contact</a>
+<nav class="nav-links" aria-label="Main navigation" role="tablist">
+<a href="#welcome" data-tab="welcome" role="tab" aria-selected="true" class="active">Welcome</a>
+<a href="#projects" data-tab="projects" role="tab" aria-selected="false">Projects</a>
+<a href="#career" data-tab="career" role="tab" aria-selected="false">Career</a>
+<a href="#mobility" data-tab="mobility" role="tab" aria-selected="false">Mobility</a>
+<a href="#passions" data-tab="passions" role="tab" aria-selected="false">Passions</a>
+<a href="#civic" data-tab="civic" role="tab" aria-selected="false">Civic Engagement</a>
 </nav></div></header>
-<section class="hero" id="welcome"><div class="hero-inner">
+<section class="hero tab-content active" id="welcome" data-page="welcome"><div class="hero-inner">
 <p class="eyebrow">Electronics, Electrical Energy, and Automation</p>
 <h1>Yvon MEISTERMANN</h1>
 <p class="hero-lead">Welcome to my portfolio. I am an engineering student in the FISA 3EA department at ENSEEIHT, Toulouse, with a strong interest in electrical systems, industrial control-command and energy production.</p>
@@ -32,39 +45,80 @@ main{overflow:hidden}.section{width:min(100% - 48px,var(--max));margin:auto;padd
 <div class="hero-facts"><div class="hero-fact"><strong>ENSEEIHT</strong><span>FISA 3EA · Toulouse</span></div><div class="hero-fact"><strong>Actemium</strong><span>Apprenticeship · 2026–2029</span></div><div class="hero-fact"><strong>Since 2019</strong><span>Volunteer firefighter</span></div></div>
 </div></section>
 <main>
-<section class="section"><div class="section-heading"><p class="kicker">01 · Profile</p><h2>Curious about how energy systems work</h2><p class="intro">My academic path has taken me from hands-on electrical engineering to preparatory studies and now to engineering school. I want to combine technical knowledge, practical experience and teamwork to help design reliable industrial systems.</p></div>
+<section class="section tab-content active" id="profile" data-page="welcome"><div class="section-heading"><p class="kicker">01 · Profile</p><h2>Curious about how energy systems work</h2><p class="intro">My academic path has taken me from hands-on electrical engineering to preparatory studies and now to engineering school. I want to combine technical knowledge, practical experience and teamwork to help design reliable industrial systems.</p></div>
 <div class="grid-3"><article class="card"><span class="card-number">01 / ENGINEERING</span><h3>Electrical systems</h3><p>Understanding electrical installations, equipment, sizing and the principles behind safe and reliable operation.</p></article><article class="card"><span class="card-number">02 / INDUSTRY</span><h3>Control and automation</h3><p>Exploring control-command systems, automation and the links between electrical equipment and industrial processes.</p></article><article class="card"><span class="card-number">03 / ENERGY</span><h3>Energy production</h3><p>Particularly interested in hydroelectric power plants, energy efficiency and the modernisation of installations.</p></article></div></section>
-<section class="section-alt" id="projects"><div class="section"><div class="section-heading"><p class="kicker">02 · Projects</p><h2>Technical interests and project areas</h2><p class="intro">These cards describe the engineering topics I am interested in developing during my studies and apprenticeship. They are not presented as completed projects.</p></div>
+<section class="section-alt tab-content" id="projects" data-page="projects"><div class="section"><div class="section-heading"><p class="kicker">02 · Projects</p><h2>Technical interests and project areas</h2><p class="intro">These cards describe the engineering topics I am interested in developing during my studies and apprenticeship. They are not presented as completed projects.</p></div>
 <div class="grid-3">
 <article class="card"><img class="card-image" src="https://images.unsplash.com/photo-1746182936577-d8c1b3aedfc1?auto=format&fit=crop&w=900&q=80" alt="Hydroelectric dam and water flow" loading="lazy"><span class="card-number">AREA 01</span><h3>Hydroelectric power</h3><p>Discovering the electrical equipment and operating principles involved in hydroelectric generation, from production to grid connection.</p><div class="tags"><span class="tag">Energy</span><span class="tag">Electrical systems</span></div></article>
 <article class="card"><img class="card-image" src="https://images.unsplash.com/photo-1749030921150-6243082a8d96?auto=format&fit=crop&w=900&q=80" alt="Interior of a hydroelectric power plant" loading="lazy"><span class="card-number">AREA 02</span><h3>Industrial control-command</h3><p>Learning how sensors, actuators, controllers and electrical equipment work together to monitor and control industrial processes.</p><div class="tags"><span class="tag">Automation</span><span class="tag">Control</span></div></article>
 <article class="card"><img class="card-image" src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/Itaipudamcontrolroom.JPG" alt="Control room at the Itaipu hydroelectric dam" loading="lazy"><span class="card-number">AREA 03</span><h3>Monitoring and modernisation</h3><p>Interested in the methods used to supervise installations, improve reliability and modernise equipment while maintaining safe operation.</p><div class="tags"><span class="tag">Supervision</span><span class="tag">Maintenance</span></div></article>
 </div><p class="note" style="margin-top:22px">As I progress through the programme, I will replace or supplement these interest areas with concrete coursework, technical deliverables and apprenticeship projects that I am authorised to share.</p>
 </div></section>
-<section class="section" id="career"><div class="section-heading"><p class="kicker">03 · Career</p><h2>A practical path towards engineering</h2><p class="intro">Each stage has helped me build a stronger foundation in electrical engineering and prepare for more advanced technical responsibilities.</p></div>
+<section class="section tab-content" id="career" data-page="career"><div class="section-heading"><p class="kicker">03 · Career</p><h2>A practical path towards engineering</h2><p class="intro">Each stage has helped me build a stronger foundation in electrical engineering and prepare for more advanced technical responsibilities.</p></div>
 <div class="timeline">
 <article class="timeline-item"><div class="timeline-date">2026–2029</div><div class="timeline-content"><h3>Engineering degree — ENSEEIHT, Toulouse INP</h3><p class="meta">FISA 3EA · Electrical Engineering, Electronics and Automatic Control</p><p>Engineering studies alongside an apprenticeship, with the aim of developing technical skills in electrical engineering, energy systems and automation.</p></div></article>
 <article class="timeline-item"><div class="timeline-date">From 2026</div><div class="timeline-content"><h3>Apprenticeship — Actemium Toulouse Energies</h3><p class="meta">VINCI Energies · Industrial electrical engineering</p><p>The planned professional environment includes electrical studies, control-command systems and energy installations, particularly in the hydroelectric sector. The exact content of projects will be added as my experience develops.</p></div></article>
 <article class="timeline-item"><div class="timeline-date">2025–2026</div><div class="timeline-content"><h3>CPGE ATS Génie Industriel</h3><p class="meta">Preparatory class · Toulouse</p><p>A demanding year strengthening scientific reasoning, mathematics, physics and engineering methods before entering an engineering programme.</p></div></article>
 <article class="timeline-item"><div class="timeline-date">2023–2025</div><div class="timeline-content"><h3>BTS Électrotechnique</h3><p class="meta">Electrical engineering</p><p>Developed foundations in electrical installations, electrical equipment, system analysis and technical problem-solving.</p></div></article>
 <article class="timeline-item"><div class="timeline-date">Before 2023</div><div class="timeline-content"><h3>Baccalauréat professionnel MELEC</h3><p class="meta">Electrical trades and connected environments</p><p>Built an initial practical foundation in electrical installations, wiring, commissioning principles and electrical safety.</p></div></article>
-</div></section>
-<section class="section-alt" id="mobility"><div class="section"><div class="section-heading"><p class="kicker">04 · Mobility</p><h2>Open to international experience</h2><p class="intro">International mobility is an opportunity to discover different working practices, improve my communication skills and gain perspective on engineering challenges.</p></div>
-<div class="grid-2"><article class="card"><span class="card-number">LEARNING GOALS</span><h3>What I would like to develop</h3><ul><li>Communicate more confidently in English in a professional setting.</li><li>Discover how engineering teams work in another country.</li><li>Understand different approaches to energy and industrial systems.</li><li>Become more independent and adaptable.</li></ul></article>
-<article class="card"><span class="card-number">PREPARATION</span><h3>Building an international mindset</h3><p>I have already had the opportunity to travel to Copenhagen in 2025 and use English in everyday situations. I would like to build on that experience and become more comfortable speaking English.</p><p class="note">My engineering mobility placement has not yet been completed. I will update this section with the destination, dates and lessons learned once they are confirmed.</p></article></div>
-</div></section>
-<section class="section" id="passions"><div class="section-heading"><p class="kicker">05 · Passions</p><h2>Activities that keep me moving</h2><p class="intro">Outside my studies, I enjoy activities that combine being outdoors, physical effort and discovering new places.</p></div>
-<div class="grid-3"><article class="card"><span class="card-number">OUTDOORS</span><h3>Mountain biking</h3><p>Mountain biking gives me the chance to get outside, work on endurance and technique, and explore different landscapes.</p><div class="tags"><span class="tag">VTT</span><span class="tag">Endurance</span></div></article><article class="card"><span class="card-number">EXPLORATION</span><h3>Hiking</h3><p>I enjoy hiking for the challenge, the scenery and the opportunity to discover places at a different pace.</p><div class="tags"><span class="tag">Nature</span><span class="tag">Discovery</span></div></article><article class="card"><span class="card-number">CHALLENGE</span><h3>Physical training</h3><p>Physical preparation helps me build consistency, manage effort and keep working towards a clear goal.</p><div class="tags"><span class="tag">Discipline</span><span class="tag">Team spirit</span></div></article></div></section>
-<section class="section-alt" id="civic"><div class="section"><div class="section-heading"><p class="kicker">06 · Civic engagement</p><h2>Volunteer firefighter since 2019</h2><p class="intro">Being a volunteer firefighter is an important part of my life. It has taught me the value of preparation, teamwork and commitment to others.</p></div>
-<div class="grid-2"><article class="card"><span class="card-number">FIELD EXPERIENCE</span><h3>Serving with the SDIS du Tarn</h3><p>I have been a volunteer firefighter in Lavaur since July 2019. This commitment involves training, teamwork and responding to emergency situations according to my training and responsibilities.</p><div class="tags"><span class="tag">Teamwork</span><span class="tag">Responsibility</span><span class="tag">Commitment</span></div></article><article class="card"><span class="card-number">COMMUNITY LIFE</span><h3>Supporting the firefighters’ association</h3><p>I also contribute to the local firefighters’ association, including communication activities and the organisation of community events such as the firefighters’ ball and a charity bingo.</p><div class="tags"><span class="tag">Organisation</span><span class="tag">Communication</span><span class="tag">Volunteering</span></div></article></div>
-<div class="band"><h3>Skills I bring to a team</h3><p>Listening, staying calm under pressure, respecting procedures, communicating clearly and helping a team work towards a shared objective.</p><div class="tags"><span class="tag">Reliability</span><span class="tag">Teamwork</span><span class="tag">Adaptability</span><span class="tag">Initiative</span></div></div>
-</div></section>
-<section class="section" id="contact"><div class="section-heading"><p class="kicker">07 · Contact</p><h2>Let’s connect</h2><p class="intro">For professional opportunities or discussions about electrical engineering, energy and automation, you can find my contact details below.</p></div>
+</div>
+<div class="section-heading" style="margin-top:30px;margin-bottom:20px">
+<p class="kicker">CONTACT DETAILS</p>
+<h2>Let’s connect</h2>
+<p class="intro">For professional opportunities or discussions about electrical engineering, energy and automation, you can find my contact details below.</p>
+</div>
 <div class="contact-panel"><div><h3>Yvon MEISTERMANN</h3><p>Engineering student · ENSEEIHT FISA 3EA</p><p>Apprenticeship at Actemium Toulouse Energies</p><p class="note">Before publishing, add your professional email address, LinkedIn URL and CV files to the links on this page.</p></div>
 <div class="contact-list"><!-- Replace each # with your real link before publishing. --><a class="contact-link" href="#" aria-label="Add your professional email address"><span class="contact-icon">@</span><span>Email — add your address</span></a><a class="contact-link" href="#" aria-label="Add your LinkedIn profile URL"><span class="contact-icon">in</span><span>LinkedIn — add your profile</span></a><a class="contact-link" href="#" aria-label="Add your CV PDF link"><span class="contact-icon">CV</span><span>Curriculum Vitae — add your PDF</span></a></div></div>
 </section>
+<section class="section-alt tab-content" id="mobility" data-page="mobility"><div class="section"><div class="section-heading"><p class="kicker">04 · Mobility</p><h2>Open to international experience</h2><p class="intro">International mobility is an opportunity to discover different working practices, improve my communication skills and gain perspective on engineering challenges.</p></div>
+<div class="grid-2"><article class="card"><span class="card-number">LEARNING GOALS</span><h3>What I would like to develop</h3><ul><li>Communicate more confidently in English in a professional setting.</li><li>Discover how engineering teams work in another country.</li><li>Understand different approaches to energy and industrial systems.</li><li>Become more independent and adaptable.</li></ul></article>
+<article class="card"><span class="card-number">PREPARATION</span><h3>Building an international mindset</h3><p>I have already had the opportunity to travel to Copenhagen in 2025 and use English in everyday situations. I would like to build on that experience and become more comfortable speaking English.</p><p class="note">My engineering mobility placement has not yet been completed. I will update this section with the destination, dates and lessons learned once they are confirmed.</p></article></div>
+</div></section>
+<section class="section tab-content" id="passions" data-page="passions"><div class="section-heading"><p class="kicker">05 · Passions</p><h2>Activities that keep me moving</h2><p class="intro">Outside my studies, I enjoy activities that combine being outdoors, physical effort and discovering new places.</p></div>
+<div class="grid-3"><article class="card"><span class="card-number">OUTDOORS</span><h3>Mountain biking</h3><p>Mountain biking gives me the chance to get outside, work on endurance and technique, and explore different landscapes.</p><div class="tags"><span class="tag">VTT</span><span class="tag">Endurance</span></div></article><article class="card"><span class="card-number">EXPLORATION</span><h3>Hiking</h3><p>I enjoy hiking for the challenge, the scenery and the opportunity to discover places at a different pace.</p><div class="tags"><span class="tag">Nature</span><span class="tag">Discovery</span></div></article><article class="card"><span class="card-number">CHALLENGE</span><h3>Physical training</h3><p>Physical preparation helps me build consistency, manage effort and keep working towards a clear goal.</p><div class="tags"><span class="tag">Discipline</span><span class="tag">Team spirit</span></div></article></div></section>
+<section class="section-alt tab-content" id="civic" data-page="civic"><div class="section"><div class="section-heading"><p class="kicker">06 · Civic engagement</p><h2>Volunteer firefighter since 2019</h2><p class="intro">Being a volunteer firefighter is an important part of my life. It has taught me the value of preparation, teamwork and commitment to others.</p></div>
+<div class="grid-2"><article class="card"><span class="card-number">FIELD EXPERIENCE</span><h3>Serving with the SDIS du Tarn</h3><p>I have been a volunteer firefighter in Lavaur since July 2019. This commitment involves training, teamwork and responding to emergency situations according to my training and responsibilities.</p><div class="tags"><span class="tag">Teamwork</span><span class="tag">Responsibility</span><span class="tag">Commitment</span></div></article><article class="card"><span class="card-number">COMMUNITY LIFE</span><h3>Supporting the firefighters’ association</h3><p>I also contribute to the local firefighters’ association, including communication activities and the organisation of community events such as the firefighters’ ball and a charity bingo.</p><div class="tags"><span class="tag">Organisation</span><span class="tag">Communication</span><span class="tag">Volunteering</span></div></article></div>
+<div class="band"><h3>Skills I bring to a team</h3><p>Listening, staying calm under pressure, respecting procedures, communicating clearly and helping a team work towards a shared objective.</p><div class="tags"><span class="tag">Reliability</span><span class="tag">Teamwork</span><span class="tag">Adaptability</span><span class="tag">Initiative</span></div></div>
+</div></section>
 </main>
 <footer><p>© <span id="year">2026</span> · Engineering Portfolio · ENSEEIHT FISA 3EA</p><a class="back-top" href="#top">Back to top ↑</a></footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const tabLinks = document.querySelectorAll("[data-tab]");
+const tabPages = document.querySelectorAll(".tab-content");
+
+function showTab(tabName) {
+  tabPages.forEach((page) => page.classList.remove("active"));
+
+  if (tabName === "welcome") {
+    document.getElementById("welcome").classList.add("active");
+    document.getElementById("profile").classList.add("active");
+  } else {
+    const page = document.getElementById(tabName);
+    if (page) page.classList.add("active");
+  }
+
+  tabLinks.forEach((link) => {
+    const selected = link.dataset.tab === tabName;
+    link.classList.toggle("active", selected);
+    link.setAttribute("aria-selected", selected ? "true" : "false");
+  });
+
+  history.replaceState(null, "", "#" + tabName);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+tabLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    showTab(link.dataset.tab);
+  });
+});
+
+const initialTab = window.location.hash.replace("#", "");
+const validTabs = ["welcome", "projects", "career", "mobility", "passions", "civic"];
+showTab(validTabs.includes(initialTab) ? initialTab : "welcome");
+</script>
 </body>
 </html>
