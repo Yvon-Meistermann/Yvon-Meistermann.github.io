@@ -175,26 +175,33 @@
             content: "";
 
             background-image: url("barrage-chastang.jpg");
-            background-position: center;
+            background-position: 70% center;
             background-size: cover;
             background-repeat: no-repeat;
         }
 
-        /* Voile sombre pour garder le texte lisible. */
-        .hero:after {
-            position: absolute;
-            z-index: -1;
-            inset: 0;
+       /* Dégradé sombre pour le texte et fondu en bas de l'image */
+.hero:after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
 
-            content: "";
-
-            background: linear-gradient(
-                90deg,
-                rgba(9,26,49,.96),
-                rgba(9,26,49,.82) 48%,
-                rgba(9,26,49,.38)
-            );
-        }
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 65%,
+            rgba(16, 39, 71, 0.75) 85%,
+            #102747 100%
+        ),
+        linear-gradient(
+            to right,
+            rgba(9, 26, 49, 0.95) 0%,
+            rgba(9, 26, 49, 0.75) 38%,
+            rgba(9, 26, 49, 0.20) 100%
+        );
+}
+        
 
         .hero-inner {
             width: min(100% - 48px, var(--max));
