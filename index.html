@@ -878,6 +878,40 @@
 
             </p>
 
+            /* Photo du barrage de Chastang */
+.hero:before {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    content: "";
+
+    background-image: url("barrage-chastang.jpg");
+
+    /* Décale légèrement la photo vers la droite */
+    background-position: 65% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Dégradé sombre pour conserver la lisibilité du texte */
+.hero:after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+
+    background: linear-gradient(
+        90deg,
+        rgba(9, 26, 49, 0.96) 0%,
+        rgba(9, 26, 49, 0.80) 35%,
+        rgba(9, 26, 49, 0.35) 70%,
+        rgba(9, 26, 49, 0.15) 100%
+    );
+}
+           
+
+        </div>
+
     </section>
 
 
