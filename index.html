@@ -186,33 +186,34 @@
 
             content: "";
 
-            background:
-                linear-gradient(
-                    to bottom,
-                    transparent 55%,
-                    rgba(245,248,252,.30) 78%,
-                    rgba(245,248,252,.85) 94%,
-                    #f5f8fc 100%
-                ),
+           background:
+    /* Fondu très léger en bas de la photo */
+    linear-gradient(
+        to bottom,
+        transparent 70%,
+        rgba(245,248,252,0.15) 88%,
+        #f5f8fc 100%
+    ),
 
-                linear-gradient(
-                    to right,
-                    rgba(9,26,49,.82) 0%,
-                    rgba(9,26,49,.62) 35%,
-                    rgba(9,26,49,.20) 65%,
-                    rgba(9,26,49,.05) 100%
-                );
+    /* Voile sombre moins important à gauche */
+    linear-gradient(
+        to right,
+        rgba(9,26,49,0.55) 0%,
+        rgba(9,26,49,0.35) 35%,
+        rgba(9,26,49,0.08) 70%,
+        transparent 100%
+    );
         }
 
         /* Position et largeur du texte :
            cette partie permet de garder le texte à gauche,
            sans qu'il soit collé au bord de l'écran. */
 
-        .hero-inner {
-            width: min(100% - 48px, var(--max));
-
+            .hero-inner {
+            width: min(100% - 48px, 1400px);
             margin: auto;
             padding: 82px 0 110px;
+            padding-left: 20px;
         }
 
         .eyebrow {
