@@ -241,14 +241,16 @@
 
 .hero-photo {
     width: 100%;
-    max-width: 340px;
+    max-width: 250px;
     aspect-ratio: 3 / 4;
 
     object-fit: cover;
     object-position: center;
 
-    border-radius: 16px;
-    border: 2px solid #ffffff55;
+    justify-self: center;
+
+    border-radius: 14px;
+    border: 2px solid #ffffff80;
     box-shadow: 0 18px 45px #00000035;
 }
 
@@ -446,7 +448,27 @@
             font-size: .78rem;
             font-weight: 750;
         }
+        
+        .project-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
 
+    border-radius: 6px;
+
+    color: white;
+    background: var(--blue);
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: background .2s ease;
+}
+
+.project-button:hover {
+    color: white;
+    background: var(--navy);
+}
 
         /* ==================================================
            7. PARCOURS PROFESSIONNEL
@@ -704,7 +726,7 @@
 }
 
 .hero-photo {
-    max-width: 230px;
+    max-width: 200px;
     margin: auto;
 }
 
@@ -872,127 +894,127 @@
 
         <section class="section-alt" id="projects">
 
-            <div class="section">
+    <div class="section">
 
-                <div class="section-heading">
+        <div class="section-heading">
 
-                    <p class="kicker">01 · Projects</p>
+            <p class="kicker">01 · Projects</p>
 
-                    <h2>Technical interests and project areas</h2>
+            <h2>Projects and technical experience</h2>
 
-                    <p class="intro">
+            <p class="intro">
+                Discover some of the technical projects I have
+                completed, contributed to or will be working on
+                during my engineering studies and apprenticeship.
+            </p>
 
-                        These cards describe the engineering topics
-                        I am interested in developing during my
-                        studies and apprenticeship. They are not
-                        presented as completed projects.
+        </div>
 
-                    </p>
+        <div class="grid-3">
 
-                </div>
+            <!-- PROJECT 1 : BTS -->
 
+            <article class="card">
 
-                <div class="grid-3">
+                <img
+                    class="card-image"
+                    src="https://images.unsplash.com/photo-1746182936577-d8c1b3aedfc1?auto=format&fit=crop&w=900&q=80"
+                    alt="Electrical industrial equipment"
+                    loading="lazy"
+                >
 
-                    <article class="card">
+                <span class="card-number">PROJECT 01 · COMPLETED</span>
 
-                        <img
-                            class="card-image"
-                            src="https://images.unsplash.com/photo-1746182936577-d8c1b3aedfc1?auto=format&fit=crop&w=900&q=80"
-                            alt="Hydroelectric dam and water flow"
-                            loading="lazy"
-                        >
+                <h3>Cardboard Forming Machine Retrofit</h3>
 
-                        <span class="card-number">AREA 01</span>
-
-                        <h3>Hydroelectric power</h3>
-
-                        <p>
-                            Discovering the electrical equipment
-                            and operating principles involved in
-                            hydroelectric generation, from production
-                            to grid connection.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">Energy</span>
-                            <span class="tag">Electrical systems</span>
-                        </div>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <img
-                            class="card-image"
-                            src="https://images.unsplash.com/photo-1749030921150-6243082a8d96?auto=format&fit=crop&w=900&q=80"
-                            alt="Interior of a hydroelectric power plant"
-                            loading="lazy"
-                        >
-
-                        <span class="card-number">AREA 02</span>
-
-                        <h3>Industrial control-command</h3>
-
-                        <p>
-                            Learning how sensors, actuators,
-                            controllers and electrical equipment
-                            work together to monitor and control
-                            industrial processes.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">Automation</span>
-                            <span class="tag">Control</span>
-                        </div>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <img
-                            class="card-image"
-                            src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/Itaipudamcontrolroom.JPG"
-                            alt="Control room at the Itaipu hydroelectric dam"
-                            loading="lazy"
-                        >
-
-                        <span class="card-number">AREA 03</span>
-
-                        <h3>Monitoring and modernisation</h3>
-
-                        <p>
-                            Interested in the methods used to
-                            supervise installations, improve
-                            reliability and modernise equipment
-                            while maintaining safe operation.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">Supervision</span>
-                            <span class="tag">Maintenance</span>
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <p class="note" style="margin-top:22px">
-
-                    As I progress through the programme, I will
-                    replace or supplement these interest areas
-                    with concrete coursework, technical deliverables
-                    and apprenticeship projects that I am authorised
-                    to share.
-
+                <p>
+                    Electrical retrofit of a cardboard forming
+                    machine during my BTS Electrotechnics.
+                    My work focused on the motor drive system.
                 </p>
 
-            </div>
+                <div class="tags">
+                    <span class="tag">Electrical engineering</span>
+                    <span class="tag">Motor drive</span>
+                </div>
 
-        </section>
+                <a href="project-bts.html" class="project-button">
+                    Learn More →
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 2 : MAINTENANCE -->
+
+            <article class="card">
+
+                <img
+                    class="card-image"
+                    src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/Itaipudamcontrolroom.JPG"
+                    alt="Electricity infrastructure control room"
+                    loading="lazy"
+                >
+
+                <span class="card-number">PROJECT 02</span>
+
+                <h3>Electricity Transmission Gallery Maintenance</h3>
+
+                <p>
+                    Technical experience related to the maintenance
+                    of an electricity transmission gallery.
+                    Further details will be added as the project develops.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Maintenance</span>
+                    <span class="tag">Electrical infrastructure</span>
+                </div>
+
+                <a href="project-maintenance.html" class="project-button">
+                    Learn More →
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 3 : FUTUR -->
+
+            <article class="card">
+
+                <img
+                    class="card-image"
+                    src="https://images.unsplash.com/photo-1749030921150-6243082a8d96?auto=format&fit=crop&w=900&q=80"
+                    alt="Industrial electrical installation"
+                    loading="lazy"
+                >
+
+                <span class="card-number">PROJECT 03 · UPCOMING</span>
+
+                <h3>Future Project</h3>
+
+                <p>
+                    This section will present a future technical
+                    project carried out during my engineering
+                    studies or apprenticeship.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Engineering</span>
+                    <span class="tag">Upcoming</span>
+                </div>
+
+                <a href="project-future.html" class="project-button">
+                    Learn More →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
 
 
         <!-- ==============================================
