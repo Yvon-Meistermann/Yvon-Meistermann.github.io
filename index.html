@@ -223,12 +223,35 @@
            cette partie permet de garder le texte à gauche,
            sans qu'il soit collé au bord de l'écran. */
 
-            .hero-inner {
-            width: min(100% - 48px, 1400px);
-            margin: auto;
-            padding: 82px 0 110px;
-            padding-left: 20px;
-        }
+        
+/* Mise en page de l'accueil : texte à gauche et photo à droite */
+
+.hero-inner {
+    width: min(100% - 48px, 1400px);
+    margin: auto;
+    padding: 82px 20px 110px;
+
+    display: grid;
+    grid-template-columns: 1.6fr 0.65fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/* Photo personnelle */
+
+.hero-photo {
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 3 / 4;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 16px;
+    border: 2px solid #ffffff55;
+    box-shadow: 0 18px 45px #00000035;
+}
+
 
         .eyebrow {
             display: flex;
@@ -671,10 +694,19 @@
                 min-height: auto;
             }
 
-            .hero-inner {
-                width: min(100% - 34px, var(--max));
-                padding: 68px 0 100px;
-            }
+            
+.hero-inner {
+    width: min(100% - 34px, var(--max));
+    padding: 55px 0 85px;
+
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.hero-photo {
+    max-width: 230px;
+    margin: auto;
+}
 
             .section,
             .section-alt .section {
@@ -794,22 +826,35 @@
 
         <div class="hero-inner">
 
-            <p class="eyebrow">
-                Electronics, Electrical Energy, and Automation
-            </p>
+    <!-- Présentation à gauche -->
 
-            <h1>Yvon MEISTERMANN</h1>
+    <div class="hero-copy">
 
-            <p class="hero-lead">
+        <p class="eyebrow">
+            Electronics, Electrical Energy, and Automation
+        </p>
 
-                Welcome to my portfolio. I am an engineering student
-                in the FISA 3EA department at ENSEEIHT, Toulouse,
-                with a strong interest in electrical systems,
-                industrial control-command and energy production.
+        <h1>Yvon MEISTERMANN</h1>
 
-            </p>
+        <p class="hero-lead">
+            Welcome to my portfolio. I am an engineering student
+            in the FISA 3EA department at ENSEEIHT, Toulouse,
+            with a strong interest in electrical systems,
+            industrial control-command and energy production.
+        </p>
 
-        </div>
+    </div>
+
+
+    <!-- Photo personnelle à droite -->
+
+    <img
+        class="hero-photo"
+        src="Photo individuelle MEISTERMANN.png"
+        alt="Portrait of Yvon Meistermann"
+    >
+
+</div>
 
     </section>
 
